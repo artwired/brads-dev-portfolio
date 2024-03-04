@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
+
+  <title>
+    Brad Cole | Front-End Developer & UI Designer based in Vancouver, CA
+  </title>
+
+  <meta name="description" content="Add small description of yourslef.">
+  <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
+  <meta name="keywords" content="Put your name, skills and some coding keywords" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+
+  <!-- ***** Header ***** -->
+
+  <header class="header" role="banner" id="top">
+    <div class="row">
+      <nav class="nav" role="navigation">
+        <ul class="nav__items">
+          <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+          <li class="nav__item">
+            <a href="#about" class="nav__link">About</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contact" class="nav__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__text-box row">
+      <div class="header__text">
+        <h1 class="heading-primary">
+          <span>Brad Cole</span>
+        </h1>
+        <p>Front-End Developer & UI Designer from Vancouver, BC
+</p>
+        <a href="#contact" class="btn btn--pink">Get in touch</a>
+      </div>
+    </div>
+  </header>
+
+  <main role="main">
+
+    <!-- ***** Work ***** -->
+
+    <section class="work" id="work">
+      <div class="row">
+        <h2>My Work</h2>
+        <div class="work__boxes">
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Watchlist</h3>
+              <p>
+                An app that let's you search for movies and save them to a watchlist.
+              </p>
+              <ul class="work__list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>OMDB API</li>
+              </ul>
+
+              <div class="work__links">
+                <a href="https://bradswatchlist.netlify.app/" target="_blank" class="link__text">
+                  Visit Site <span>&rarr;</span>
+                </a>
+                <a href="https://github.com/artwired/watchlist" title="View Source Code" target="_blank">
+                  <img src="./images/github.svg" class="work__code" alt="GitHub">
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/watchlist.png" class="work__image" alt="Project 1" />
+            </div>
+          </div>
+
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Music Reviews Website</h3>
+              <p>
+                A website that shares reviews for new indie, electronic, and jazz music releases
+              </p>
+              <ul class="work__list">
+                <li>React</li>
+                <li>JavaScript</li>
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
+
+              <div class="work__links">
+                <a href="https://sweetrelease.netlify.app/" class="link__text">
+                  Visit Site <span>&rarr;</span>
+                </a>
+                <a href="#">
+                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/sweet-release.png" class="work__image" alt="Project 1" />
+            </div>
+          </div>
+
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Quizzical App</h3>
+              <p>
+                A quiz app that displays a set of trivia questions for you to answer
+              </p>
+              <ul class="work__list">
+                <li>React</li>
+                <li>JavaScript</li>
+                <li>CSS</li>
+                <li>OTDB API</li>
+              </ul>
+
+              <div class="work__links">
+                <a href="https://bradsquizzical.netlify.app/" class="link__text">
+                  Visit Site <span>&rarr;</span>
+                </a>
+                <a href="https://github.com/artwired/Quizzical">
+                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/quiz.jpg" class="work__image" alt="Project 3" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ***** About ***** -->
+
+    <section class="about" id="about">
+      <div class="row">
+        <h2>About Me</h2>
+        <div class="about__content">
+          <div class="about__text">
+          I would call myself a lover of complex challenges! I'm a web developer and UI designer based out of Vancouver, 
+          Canada. I've been a creative problem solver since I started drawing as a kid. I've always enjoyed using 
+          creativity to figure out complex problems. I would say that's what drove me to fall in love with web development 
+          when I was exposed to HTML during my Graphic Design studies.</p>
+            <!-- Provide a link to your resume -->
+            <a href="./resources/brad-2024-resume.pdf" class="btn" target="_blank">My Resume</a>
+          </div>
+
+          <div class="about__photo-container">
+            <!-- Add a nice photo of yourself -->
+            <img class="about__photo" src="./images/me-on-tenth-2024.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ***** Contact ***** -->
+
+  <section class="contact" id="contact">
+    <div class="row">
+      <h2>Get in Touch</h2>
+      <div class="contact__info">
+        <p>
+          Are you looking to hire someone who aspires to build and design engaging, responsive and beautiful 
+          websites and apps? Are you interested in working with someone who is eager to learn and grow into an 
+          indespensible part of your team 🧙‍♂️? If you have any questions for me or have some advice
+          or if you just want to say "Hi! 👋", I'd love to hear from you! The best way to reach out to
+          me is via email.
+        </p>
+        <a href="mailto:bradcoledesign@gmail.com" class="btn">bradcoledesign@gmail.com</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ***** Footer ***** -->
+
+  <footer role="contentinfo" class="footer">
+    <div class="row">
+      <!-- Update the links to point to your accounts -->
+      <ul class="footer__social-links">
+        <li class="footer__social-link-item">
+          <a href="https://github.com/artwired" title="Link to Github Profile" target="_blank">
+            <img src="./images/github.svg" class="footer__social-image" alt="Github">
+          </a>
+        </li>
+        <li class="footer__social-link-item">
+          <a href="https://www.behance.net/bradcoleart" title="Link to Behance Profile" target="_blank">
+            <img src="./images/behance-logo.svg" class="footer__social-image" alt="Behance">
+          </a>
+        </li>
+        <li class="linkedin-link-item">
+          <a href="https://www.linkedin.com/in/bradcoleideas/" target="_blank">
+            <img src="./images/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
+          </a>
+        </li>
+        <li class="x-link-item">
+          <a  href="https://twitter.com/bradcolewebhead" title="Link to X Profile" target="_blank">
+            <img class="x-logo" src="./images/twitter.svg" class="footer__social-image" alt="Twitter">
+          </a>
+        </li>
+      </ul>
+
+      <!-- If you give me some credit by keeping the below paragraph, will be huge for me 😊 Thanks. -->
+      
+      <!-- <p>
+        &copy; 2020 - Template designed & developed by <a href="https://nisar.dev" class="link">Nisar</a>.
+      </p>
+      
+      <div class="footer__github-buttons">
+        <iframe
+          src="https://ghbtns.com/github-btn.html?user=nisarhassan12&repo=portfolio-template&type=watch&count=true"
+          frameborder="0" scrolling="0" width="170" height="20" title="Watch Portfolio Template on GitHub">
+        </iframe>
+      </div>
+       -->
+    </div>
+  </footer>
+
+  <a href="#top" class="back-to-top" title="Back to Top">
+    <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
+  </a>
+  <script src="./index.js"></script>
+</body>
+
+</html>
