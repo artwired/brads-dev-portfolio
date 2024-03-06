@@ -597,6 +597,11 @@ body:not(.user-is-tabbing) a:focus {
 }
 .footer__social-image {
   height: 4rem;
+  transition: all 0.125s ease;
+}
+.footer__social-image:hover {
+  filter: invert(39%) sepia(64%) saturate(7460%) hue-rotate(346deg)
+    brightness(105%) contrast(97%);
 }
 .x-logo {
   height: 3rem;
