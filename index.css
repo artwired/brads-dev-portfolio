@@ -584,15 +584,13 @@ body:not(.user-is-tabbing) a:focus {
 .footer__social-links {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: var(--gutter-normal) 0;
   list-style: none;
 }
 
 .footer__social-link-item:not(:last-of-type) {
   margin-right: var(--gutter-small);
-}
-.linkedin-link-item {
-  margin-right: 0.115em;
 }
 .footer__social-link-item:not(:last-of-type) .x-link-item {
   margin-right: 0;
@@ -602,7 +600,6 @@ body:not(.user-is-tabbing) a:focus {
 }
 .x-logo {
   height: 3rem;
-  margin: calc(1.6rem - 50%);
 }
 
 .footer__github-buttons {
