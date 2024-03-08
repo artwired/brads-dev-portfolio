@@ -571,6 +571,41 @@ body:not(.user-is-tabbing) a:focus {
 .contact__info {
   max-width: var(--container-medium-width);
 }
+.contact-CTA {
+  display: flex;
+  align-items: center;
+}
+.availability-container {
+  display: flex;
+  align-items: center;
+}
+@keyframes blink {
+  0%,
+  25% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 4px rgba(255, 165, 0, 0.5);
+  }
+  50% {
+    opacity: 0;
+    transform: scale(0.8);
+    box-shadow: none;
+  }
+  75%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 4px rgba(255, 165, 0, 0.5);
+  }
+}
+.blinking-dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--blood-orange);
+  margin: 0 0.5em 0 2.5em;
+  animation: blink 1.5s ease-in-out infinite;
+}
 
 /* --------------------------------------- */
 /* ----- Footer ----- */
