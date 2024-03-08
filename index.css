@@ -571,13 +571,11 @@ body:not(.user-is-tabbing) a:focus {
 .contact__info {
   max-width: var(--container-medium-width);
 }
-.contact-CTA {
-  display: flex;
-  align-items: center;
-}
+
 .availability-container {
   display: flex;
   align-items: center;
+  margin-top: 0.5em;
 }
 @keyframes blink {
   0%,
@@ -603,8 +601,21 @@ body:not(.user-is-tabbing) a:focus {
   height: 15px;
   border-radius: 50%;
   background-color: var(--blood-orange);
-  margin: 0 0.5em 0 2.5em;
+  margin: 0 1em 0 0;
   animation: blink 1.5s ease-in-out infinite;
+}
+@media (min-width: 900px) {
+  .contact-CTA {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+  .availability-container {
+    margin-top: 0;
+  }
+  .blinking-dot {
+    margin: 0 0.5em 0 2.5em;
+  }
 }
 
 /* --------------------------------------- */
