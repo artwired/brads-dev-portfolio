@@ -1,233 +1,760 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=PT+Serif:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
+    <title>
+      Brad Cole | Front-End Developer & UI Designer based in Vancouver, CA
+    </title>
+    <meta name="description" content="Add small description of yourslef." />
+    <meta
+      name="keywords"
+      content="Brad Cole, Frontend Developer, HTML, CSS, JavaScript, UI Design, Typography, Wireframing"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
 
-<head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
+  <body>
+    <!-- ***** Header ***** -->
 
-  <title>
-    Brad Cole | Front-End Developer & UI Designer based in Vancouver, CA
-  </title>
+    <header class="header gradient-overlay" role="banner" id="top">
+      <div class="row">
+        <nav class="nav" role="navigation">
+          <ul class="nav__items">
+            <li class="nav__item">
+              <a href="#work" class="nav__link">Work</a>
+            </li>
+            <li class="nav__item">
+              <a href="#about" class="nav__link">About</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__text-box row">
+        <div class="header__text">
+          <h1 class="heading-primary">
+            <span>Brad Cole</span>
+          </h1>
+          <p>Front-End Developer & UI Designer from Vancouver, BC</p>
+          <a href="#contact" class="btn btn--pink">Get in touch</a>
+        </div>
+      </div>
+    </header>
 
-  <meta name="description" content="Add small description of yourslef.">
-  <meta name="keywords" content="Brad Cole, Frontend Developer, HTML, CSS, JavaScript, UI Design, Typography, Wireframing" />
-  <link rel="stylesheet" href="index.css" />
-</head>
+    <main role="main">
+      <!-- ***** Work ***** -->
 
-<body>
+      <section class="work" id="work">
+        <div class="row">
+          <h2>My Work</h2>
+          <div class="work__boxes">
+            <div class="work__box_mod">
+              <div class="work__box">
+                <div class="work__text">
+                  <h3>Watchlist</h3>
+                  <p>
+                    An app that let's you search for movies and save them to a
+                    watchlist.
+                  </p>
+                  <ul class="work__list">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>OMDB API</li>
+                  </ul>
+                  <div class="work__links">
+                    <a
+                      href="https://bradswatchlist.netlify.app/"
+                      target="_blank"
+                      class="link__text"
+                    >
+                      Visit Site <span>&rarr;</span>
+                    </a>
+                    <a
+                      href="https://github.com/artwired/watchlist"
+                      title="View Source Code"
+                      target="_blank"
+                    >
+                      <img
+                        src="./images/github.svg"
+                        class="work__code"
+                        alt="GitHub"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <a href="https://bradswatchlist.netlify.app/" target="_blank">
+                  <div class="work__image-box">
+                    <img
+                      src="./images/watchlist.png"
+                      class="work__image"
+                      alt="Project 1"
+                    />
+                  </div>
+                </a>
+              </div>
+              <div class="to-expand-project">
+                <div id="watchlist-project-btn" class="project-details-btn">
+                  <div id="watchlist-expand-icon" class="expand-icon"></div>
+                  <p id="watchlist-project-p">Read Project Details</p>
+                </div>
+              </div>
+              <div
+                id="watchlist-full-project-description"
+                class="full-project-description hidden watchlist-smooth-toggle-description"
+              >
+                <p>
+                  This Watchlist app was built using HTML, CSS and Vanilla
+                  JavaScript. The mockup for the design was provided by
+                  Scrimba's Frontend Developer Career Path course curriculum and
+                  I chose to strictly adhere to the design specs to showcase my
+                  ability to build projects that meet a creative departments
+                  visual standards. A large part of the learning experience for
+                  this project was also to learn to use JavScripts Fetch API to
+                  fetch and return content from the Open Movie Database API.
+                </p>
+                <h4>Project Development Phases</h4>
+                <p class="challenges-overview-text">
+                  First, I decided to tackle the apps general styles and
+                  structure using HTML and CSS.
+                </p>
+                <p class="challenges-section">Phase 1 Process Highlights:</p>
+                <ul>
+                  <li>
+                    I found a way to use CSS properties to center the headers
+                    background image in close proximity to the projects design
+                    using background-position
+                  </li>
+                  <li>
+                    Learned how to apply a filter to the header background image
+                    to darken the overall color cast
+                  </li>
+                  <li>
+                    Used the CSS vh property and flexbox to vertically center
+                    the film icon graphic in the center of the main div
+                  </li>
+                </ul>
+                <p class="challenges-overview-text">
+                  The second phase was to use the JavaScript Fetch API to search
+                  for movie data provided by the Open Movie Database API (OMDB)
+                  and render that movie information into individually returned
+                  cards.
+                </p>
+                <p class="challenges-section">Phase 2 Process Highlights:</p>
+                <ul>
+                  <li>
+                    Read the OMDB documentation to learn how to use their API's
+                    query string parameters
+                  </li>
+                  <li>
+                    I learned how to use JavaScript .value to inject the
+                    searched for value into the API fetch query string using
+                    template literals
+                  </li>
+                  <li>
+                    Used the map method to render individual movie data returned
+                    by the search to individual movie cards.
+                  </li>
+                  <li>
+                    Some values were missing from the objects key value pairs
+                    that were returned by some search returns. I needed to
+                    adjust the card styles using if statements to identify the
+                    edge cases. In the case of a missing Movie Cover artwork I
+                    created my own holder image.
+                  </li>
+                </ul>
+                <p class="challenges-overview-text">
+                  The third phase was to use browser localstorage to remember
+                  movie data that had been pushed/saved to the "My Watchlist"
+                  page.
+                </p>
+                <p class="challenges-section">Phase 3 Process Highlights:</p>
+                <ul>
+                  <li>
+                    Understanding how localstorage works was a big hurdle for me
+                    to get over and it's one of the aspects of this projject
+                    that I was most proud of wrapping my mind around.
+                  </li>
+                  <li>
+                    I learned how to set local storage when the add to watchlist
+                    button was clicked and then how to import and use that
+                    object data by utilizing getlocalstorage to list movies I
+                    had added to my watchlist.
+                  </li>
+                  <li>
+                    Understanding how to use getlocalstorage in the movie search
+                    results page to use saved movie data to help target
+                    previously selected movies so that there was a way to
+                    remember and mark movies that had already been added to the
+                    watchlist.
+                  </li>
+                </ul>
+                <p class="challenges-overview-text">
+                  The fourth and final phase in my process for this project was
+                  to figure out how to apply a "read more" button to the movie
+                  description data so that I could maintain a controlled snippet
+                  layout for the search results cards.
+                </p>
+                <p class="challenges-section">Phase 4 Process Highlights:</p>
+                <ul class="no-border-bottom">
+                  <li>
+                    Maintaining the designs layout was important to me so I was
+                    determined to incorporate the "read more button" for each
+                    cards movie description
+                  </li>
+                  <li>
+                    It was a challenge to figure out how to implement this
+                    feature of the design as my researh didn't uncover any
+                    information on how to implement this dynamically. I posted a
+                    request for help to the Scrimba coding forum and although
+                    the responses did send me in the right direction I was
+                    unable to use the information garnered there to come to a
+                    solution.
+                  </li>
+                  <li>
+                    I used psuedo code to make the steps I wanted to try
+                    concrete in my mind and this approach ultimately let me to a
+                    solution for how to implement the read more button feature.
+                  </li>
+                </ul>
+                <h4>Lessons learned</h4>
+                <p>
+                  The watchlist project taught me how valuable it is to take a
+                  step back and write out psuedo code to wrap my head around
+                  challenging coding problems. Doing this allowed me to break
+                  parts of the project down so that I could tackle smaller
+                  challenges individuallly to create solutions for more
+                  challenging functionalities. This was helpful to figure out
+                  how to apply a check mark for movies that had already been
+                  added to the watchlist as well as in figuring out how to get
+                  the read more button to work with dynamically generated movie
+                  descriptions.
+                </p>
+              </div>
+            </div>
+            <div class="work__box_mod">
+              <div class="work__box">
+                <div class="work__text">
+                  <h3>Music Reviews Website</h3>
+                  <p>
+                    A website that shares reviews for new indie, electronic, and
+                    jazz music releases
+                  </p>
+                  <ul class="work__list">
+                    <li>React</li>
+                    <li>JavaScript</li>
+                    <li>Firebase</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                  </ul>
 
-  <!-- ***** Header ***** -->
+                  <div class="work__links">
+                    <a
+                      href="https://sweetrelease.netlify.app/"
+                      class="link__text"
+                    >
+                      Visit Site <span>&rarr;</span>
+                    </a>
+                    <a href="#">
+                      <img
+                        src="./images/github.svg"
+                        class="work__code"
+                        title="View Source Code"
+                        alt="GitHub"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <a href="https://sweetrelease.netlify.app/" target="_blank">
+                  <div class="work__image-box">
+                    <img
+                      src="./images/sweet-release.png"
+                      class="work__image"
+                      alt="Project 1"
+                    />
+                  </div>
+                </a>
+              </div>
+              <div class="to-expand-project">
+                <div id="sweet-release-project-btn" class="project-details-btn">
+                  <div id="sweet-release-expand-icon" class="expand-icon"></div>
+                  <p id="sweet-release-project-p">Read Project Details</p>
+                </div>
+              </div>
+              <div
+                id="sweet-release-full-project-description"
+                class="full-project-description hidden"
+              >
+                <p>
+                  Sweet Release is built using HTML, CSS, JavaScript, React and
+                  Firebase. The design for this site was conceptualized and
+                  designed by me. It was my first website to design and build
+                  using React. Music is a big part of my life and I love to
+                  discover talented new musical artists. Eventually I would like
+                  to grow Sweet Release into a full blown online resource for
+                  music reviews. Some of the more complex challenges related to
+                  building this project were learning how to use Firebase with
+                  React to build user authentication as well as learning how to
+                  push form data to Firebase.
+                </p>
+                <h4>Project Development Phases</h4>
+                <p class="challenges-overview-text">
+                  The first phase for this project was deciding what kind of
+                  information I wanted to include for each album review and then
+                  building out a data.js file to hold that data.
+                </p>
+                <p class="challenges-section">Phase 1 Process Highlights:</p>
+                <ul>
+                  <li>
+                    I researched other music reviews websites to come up with a
+                    plan for what kind of data I wanted to share on the site.
+                  </li>
+                  <li>
+                    I learned how to correctly format JSON data into an array so
+                    that it could be imported and accessed by the JavaScript map
+                    method in my App.jsx file
+                  </li>
+                  <li>
+                    My album images weren't rendering so I did some research and
+                    discovered that I needed to import the image files into the
+                    data.js file so that React could access them.
+                  </li>
+                </ul>
+                <p class="challenges-overview-text">
+                  The second phase was to use template literals and the
+                  JavaScript map method to output my data for each data item to
+                  the screen in my desired layout.
+                </p>
+                <p class="challenges-section">Phase 2 Process Highlights:</p>
+                <ul>
+                  <li>
+                    I learned how to use JavaScripts rest operator to pass my
+                    data through to my template component
+                  </li>
+                  <li>
+                    When the data was passed through to my Card component I
+                    destructured each object item so that I could access the key
+                    value pairs more succinctly when designing my template.
+                  </li>
+                </ul>
+                <p class="challenges-overview-text">
+                  The third phase was to design the branding, layout and UX and
+                  to choose color's for the site as well as to write the CSS.
+                </p>
+                <p class="challenges-section">Phase 3 Process Highlights:</p>
+                <ul>
+                  <li>
+                    I wanted to be professional in defining descriptive and easy
+                    to understand class names in my HTML template for my CSS.
+                  </li>
+                  <li>
+                    One of my more challenging aspects of this project was
+                    learning how to open a modal for when people clicked the
+                    Read Review button and using useState for my first time in a
+                    self directed project to pass the correct album review data
+                    to the modal.
+                  </li>
+                  <li>I learned how to import and use Font Awesome icons.</li>
+                  <li>
+                    I did some design work to create a logo and website name
+                    that was inline with the content I was sharing.
+                  </li>
+                  <li>
+                    I used @media to create a responsive design that looks great
+                    and behaves well on mobile, tablet and desktop devices.
+                  </li>
+                </ul>
+                <p class="challenges-overview-text">
+                  The fourth phase in my process was to refactor my code to use
+                  React Router so that I could create login and admin pages for
+                  making it easier to enter album review data to the site.
+                </p>
+                <p class="challenges-section">Phase 4 Process Highlights:</p>
+                <ul class="no-border-bottom">
+                  <li>
+                    I used Browser Router to create protected routes that
+                    redirect users to a login page if they try to access the
+                    admin component.
+                  </li>
+                  <li>
+                    I set a up a Firebase database for holding server side
+                    authentication credentials to test against.
+                  </li>
+                </ul>
+                <h4>Lessons learned</h4>
+                <p>
+                  Hi mindless mortuis soulless creaturas, imo evil stalking
+                  monstra adventus resi dentevil vultus comedat cerebella
+                  viventium. Qui animated corpse, cricket bat max brucks
+                  terribilem incessu zomby. The voodoo sacerdos flesh eater,
+                  suscitat mortuos comedere carnem virus.
+                </p>
+              </div>
+            </div>
+            <div class="work__box_mod">
+              <div class="work__box">
+                <div class="work__text">
+                  <h3>Quizzical App</h3>
+                  <p>
+                    A quiz app that displays a set of trivia questions for you
+                    to answer
+                  </p>
+                  <ul class="work__list">
+                    <li>React</li>
+                    <li>JavaScript</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>OTDB API</li>
+                  </ul>
+                  <div class="work__links">
+                    <a
+                      href="https://bradsquizzical.netlify.app/"
+                      class="link__text"
+                    >
+                      Visit Site <span>&rarr;</span>
+                    </a>
+                    <a href="https://github.com/artwired/Quizzical">
+                      <img
+                        src="./images/github.svg"
+                        class="work__code"
+                        title="View Source Code"
+                        alt="GitHub"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <a href="https://bradsquizzical.netlify.app/" target="_blank">
+                  <div class="work__image-box">
+                    <img
+                      src="./images/quiz.jpg"
+                      class="work__image"
+                      alt="Project 3"
+                    />
+                  </div>
+                </a>
+              </div>
+              <div class="to-expand-project">
+                <div id="quizzical-project-btn" class="project-details-btn">
+                  <div id="quizzical-expand-icon" class="expand-icon"></div>
+                  <p id="quizzical-project-p">Read Project Details</p>
+                </div>
+              </div>
+              <div
+                id="quizzical-full-project-description"
+                class="full-project-description hidden"
+              >
+                <p>
+                  Quizzical was built using HTML, CSS, Vanilla JavaScript and
+                  React in conjunction with the Open Trivia Database API (OTDB).
+                  I again, chose to stay true to the mock up provided by Scrimba
+                  with the exception of building the app to apply a responsive
+                  layout. One of the most challenging and enjoyable aspects for
+                  me while building this project was learning how to work with
+                  React's useEffect to handle API calls using fetch.
+                </p>
+                <h4>Project Development Phases</h4>
+                <p class="challenges-overview-text">
+                  First, I again chose to work on the general styles and
+                  structure of the Quizzical app using HTML and CSS.
+                </p>
+                <p class="challenges-section">Phase 1 Process Highlights:</p>
+                <ul>
+                  <li>
+                    Working on the styles and structure of this app was fairly
+                    straight forward but one cool thing I learned was how to use
+                    background-position in CSS to position my graphic elements.
+                  </li>
+                  <li>
+                    Adjusting the design for a mobile layout was fairly straight
+                    forward as well as I used a mobile first approach and @media
+                    to adjust the layout to meet the desktop mock-up
+                    specifications.
+                  </li>
+                </ul>
+                <p class="challenges-overview-text">
+                  The second phase was to get a quick win by taking the user to
+                  the start quiz page when they clicked the start quiz button.
+                </p>
+                <p class="challenges-section">Phase 2 Process Highlights:</p>
+                <ul>
+                  <li>
+                    I worked with useState and a ternary operator to take the
+                    user to the quiz page after clicking the Start Quiz button
+                    or if the app had just loaded and the startQuiz state was
+                    set as false to present them with the initial landing page.
+                  </li>
+                </ul>
+                <p class="challenges-overview-text">
+                  The third phase was to fetch the OTDB data inside a useEffect
+                  using the more standardized Async Await approach.
+                </p>
+                <p class="challenges-section">Phase 3 Process Highlights:</p>
+                <ul>
+                  <li>
+                    A big challenge I needed to overcome in this phase of the
+                    project was to make sure that my call to the OTDB API did
+                    not get stuck in a loop resulting in crashing the program.
+                    My solution was to create an if statement inside the
+                    useEffect that only initiated an API call when the starQuiz
+                    state had been set to true.
+                  </li>
+                  <li>
+                    I worked to understand how to implement async await syntax
+                    to use a more modern approach to working with promises than
+                    I had in previous projects.
+                  </li>
+                  <li>
+                    I learned how to use the try / catch syntax to make sure
+                    that if any errors were thrown I would recieve some clues as
+                    to what the error was by having the error logged to the
+                    console.
+                  </li>
+                </ul>
+                <p class="challenges-overview-text">
+                  The fourth phase of the Quizzical project was to shuffle the
+                  output for the possible quiz answers making sure to include
+                  the correct answer and 3 incorrect answers.
+                </p>
+                <p class="challenges-section">Phase 4 Process Highlights:</p>
+                <ul class="no-border-bottom">
+                  <li>
+                    First I mapped through the quizData that had been
+                    destructured into the QuestionsComponent which was
+                    established in App.jsx and passed down through the QuizPage
+                    component.
+                  </li>
+                  <li>
+                    Then I Implemented an array to hold the correct answer
+                    object and used a spread operator to take in the 3 incorrect
+                    answers objects so that a single array could be pointed to
+                    for applying a shuffle function.
+                  </li>
+                  <li>
+                    I turned to ChatGPT to find an algorithm for shuffling array
+                    elements called The Fisher-Yates Shuffle and used it to
+                    output the array of answers into random order.
+                  </li>
+                  <li>
+                    I applied the map method to loop through the array and
+                    output each answer for each question to an HTML template
+                  </li>
+                  <li>
+                    At this point I wanted to apply styles to indicate when a
+                    user had selected an answer and to allow them to change
+                    their minds and shift the style to the new answer if they so
+                    desired.
+                  </li>
+                  <li>
+                    The final step in this phase of the project was to use the
+                    He library to decode HTML entities rendered in the data
+                    output.
+                  </li>
+                </ul>
+                <p class="challenges-overview-text">
+                  The fifth phase involved processing the users answers,
+                  calculating the score and applying the styling to indicate
+                  correct and incorrect answer attempts after the answers have
+                  been submitted.
+                </p>
+                <p class="challenges-section">Phase 5 Process Highlights:</p>
+                <ul class="no-border-bottom">
+                  <li>
+                    Inside the answer options that were mapped out using the map
+                    method an inline onClick handler in the rendered output in
+                    the QuestionsComponent was implemented to check for correct
+                    answers and applied green styling. Then for any incorrect
+                    answers it applied a pinkish red style and also a green
+                    style to indicate what the correct answer was.
+                  </li>
+                  <li>
+                    When the user clicks Check Answers the setShowScore state
+                    sets showScore to true which activates the calculateScore
+                    function and passes the score to the CalcScore component for
+                    rendering.
+                  </li>
+                </ul>
+                <p class="challenges-overview-text">
+                  The sixth phase was to repopulate the the QuizPage with new
+                  questions and answers data when the user clicks the play again
+                  button.
+                </p>
+                <p class="challenges-section">Phase 6 Process Highlights:</p>
+                <ul class="no-border-bottom">
+                  <li>
+                    When the play again button is clicked the program fires the
+                    handlePlayAgain functon which clears the previous quiz data
+                    and sets the playAgainClicked state to true.
+                  </li>
+                  <li>
+                    A useEffect that is initiated whenever the playAgainClicked
+                    state in the dependency is updated activates the fetch call
+                    to the OTDB using async await.
+                  </li>
+                  <li>
+                    The handlePlayAgain function also sets the quizData state to
+                    null. This fires another useEffect which resets the score,
+                    clears the previously selected answers and sets
+                    answersChecked to false. All of which basically sets up the
+                    quiz page as a blank slate for the new questions and answers
+                    to be renderred again.
+                  </li>
+                </ul>
+                <h4>Lessons learned</h4>
+                <p>
+                  Quizzical really helped me to understand the importance of
+                  controlling the calls to a fetch API when you do so using
+                  useEffect. This project also taught me that using ChatGPT to
+                  find solutions for project challenges is a game changer and
+                  saves so much time compared to scouring stack overflow and
+                  Google for potential solution. At the same time, I learned
+                  that I must have a good understanding of the web development
+                  language you're working with to fully take advantage of
+                  ChatGPT because sometime the AI misunderstands your intentions
+                  and you need to be able to spot the discrepencies and guide
+                  ChatGPT back onto the correct path. In the end I had a great
+                  understanding of how my code was working.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <header class="header" role="banner" id="top">
-    <div class="row">
-      <nav class="nav" role="navigation">
-        <ul class="nav__items">
-          <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-          <li class="nav__item">
-            <a href="#about" class="nav__link">About</a>
+      <!-- ***** About ***** -->
+
+      <section class="about" id="about">
+        <div class="row">
+          <h2>About Me</h2>
+          <div class="about__content">
+            <div class="about__text">
+              <p>
+                I’m a web designer and frontend developer based in Vancouver,
+                Canada. I design and build modern, responsive websites with a
+                focus on visual quality, clarity, and usability.
+              </p>
+
+              <p>
+                I combine design and development with a strong sense of visual
+                identity, helping create websites that feel cohesive,
+                intentional, and aligned with each brand. I also think carefully
+                about structure and flow, so users can navigate content easily.
+              </p>
+            </div>
+
+            <div class="about__photo-container">
+              <img
+                class="about__photo"
+                src="./images/me-on-tenth-2024.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ***** Contact ***** -->
+
+    <section class="contact" id="contact">
+      <div class="row">
+        <h2>Get in Touch</h2>
+        <div class="contact__info">
+          <p>
+            If you’re looking for a clean, modern website or want to improve how
+            your business is presented online, feel free to reach out.
+          </p>
+          <p>Feel free to reach out via email to get started.</p>
+          <div class="contact-CTA">
+            <a href="mailto:bradcoledesign@gmail.com" class="btn"
+              >bradcoledesign@gmail.com</a
+            >
+            <div class="availability-container">
+              <div class="blinking-dot"></div>
+              <p>Available for work</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ***** Footer ***** -->
+
+    <footer role="contentinfo" class="footer">
+      <div class="row">
+        <ul class="footer__social-links">
+          <li class="footer__social-link-item">
+            <a
+              href="https://github.com/artwired"
+              title="Link to Github Profile"
+              target="_blank"
+            >
+              <img
+                src="./images/github.svg"
+                class="footer__social-image"
+                alt="Github"
+              />
+            </a>
           </li>
-          <li class="nav__item">
-            <a href="#contact" class="nav__link">Contact</a>
+          <li class="footer__social-link-item">
+            <a
+              href="https://www.behance.net/bradcoleart"
+              title="Link to Behance Profile"
+              target="_blank"
+            >
+              <img
+                src="./images/behance-logo.svg"
+                class="footer__social-image"
+                alt="Behance"
+              />
+            </a>
+          </li>
+          <li class="footer__social-link-item">
+            <a
+              href="https://www.linkedin.com/in/bradcoleideas/"
+              target="_blank"
+            >
+              <img
+                src="./images/linkedin.svg"
+                title="Link to Linkedin Profile"
+                class="footer__social-image"
+                alt="Linkedin"
+              />
+            </a>
+          </li>
+          <li class="x-link-item">
+            <a
+              href="https://twitter.com/bradcolewebhead"
+              title="Link to X Profile"
+              target="_blank"
+            >
+              <img
+                class="x-logo footer__social-image"
+                src="./images/twitter.svg"
+                alt="Twitter"
+              />
+            </a>
           </li>
         </ul>
-      </nav>
-    </div>
-    <div class="header__text-box row">
-      <div class="header__text">
-        <h1 class="heading-primary">
-          <span>Brad Cole</span>
-        </h1>
-        <p>Front-End Developer & UI Designer from Vancouver, BC
-</p>
-        <a href="#contact" class="btn btn--pink">Get in touch</a>
       </div>
-    </div>
-  </header>
+    </footer>
 
-  <main role="main">
-
-    <!-- ***** Work ***** -->
-
-    <section class="work" id="work">
-      <div class="row">
-        <h2>My Work</h2>
-        <div class="work__boxes">
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Watchlist</h3>
-              <p>
-                An app that let's you search for movies and save them to a watchlist.
-              </p>
-              <ul class="work__list">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>OMDB API</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="https://bradswatchlist.netlify.app/" target="_blank" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="https://github.com/artwired/watchlist" title="View Source Code" target="_blank">
-                  <img src="./images/github.svg" class="work__code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <a href="https://bradswatchlist.netlify.app/" target="_blank">
-            <div class="work__image-box">
-              <img src="./images/watchlist.png" class="work__image" alt="Project 1" />
-            </div>
-          </a>
-          </div>
-
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Music Reviews Website</h3>
-              <p>
-                A website that shares reviews for new indie, electronic, and jazz music releases
-              </p>
-              <ul class="work__list">
-                <li>React</li>
-                <li>JavaScript</li>
-                <li>HTML</li>
-                <li>CSS</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="https://sweetrelease.netlify.app/" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="#">
-                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <a href="https://sweetrelease.netlify.app/" target="_blank">
-            <div class="work__image-box">
-              <img src="./images/sweet-release.png" class="work__image" alt="Project 1" />
-            </div>
-          </a>
-          </div>
-
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Quizzical App</h3>
-              <p>
-                A quiz app that displays a set of trivia questions for you to answer
-              </p>
-              <ul class="work__list">
-                <li>React</li>
-                <li>JavaScript</li>
-                <li>CSS</li>
-                <li>OTDB API</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="https://bradsquizzical.netlify.app/" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="https://github.com/artwired/Quizzical">
-                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <a href="https://bradsquizzical.netlify.app/" target="_blank">
-            <div class="work__image-box">
-              <img src="./images/quiz.jpg" class="work__image" alt="Project 3" />
-            </div>
-          </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ***** About ***** -->
-
-    <section class="about" id="about">
-      <div class="row">
-        <h2>About Me</h2>
-        <div class="about__content">
-          <div class="about__text">
-          I would call myself a lover of complex challenges! I'm a web developer and UI designer based out of Vancouver, 
-          Canada. I've been a creative problem solver since I started drawing as a kid. I've always enjoyed using 
-          creativity to figure out complex problems. I would say that's what drove me to fall in love with web development 
-          when I was exposed to HTML during my Graphic Design studies.</p>
-
-            <a href="https://drive.google.com/file/d/15dbYLapk_064sJwSfn7sfFCUhQ6CgufY/view?usp=sharing" class="btn" target="_blank">My Resume</a>
-          </div>
-
-          <div class="about__photo-container">
-
-            <img class="about__photo" src="./images/me-on-tenth-2024.jpg" alt="" />
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- ***** Contact ***** -->
-
-  <section class="contact" id="contact">
-    <div class="row">
-      <h2>Get in Touch</h2>
-      <div class="contact__info">
-        <p>
-          Are you looking to hire someone who aspires to build and design engaging, responsive and beautiful 
-          websites and apps? Are you interested in working with someone who is eager to learn and grow into an 
-          indespensible part of your team 🧙‍♂️? If you have any questions for me or have some advice
-          or if you just want to say "Hi! 👋", I'd love to hear from you! The best way to reach out to
-          me is via email.
-        </p>
-        <div class="contact-CTA">
-        <a href="mailto:bradcoledesign@gmail.com" class="btn">bradcoledesign@gmail.com</a>
-        <div class="availability-container">
-          <div class="blinking-dot"></div>
-          <p>Available for work</p>
-      </div>
-    </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ***** Footer ***** -->
-
-  <footer role="contentinfo" class="footer">
-    <div class="row">
-      <ul class="footer__social-links">
-        <li class="footer__social-link-item">
-          <a href="https://github.com/artwired" title="Link to Github Profile" target="_blank">
-            <img src="./images/github.svg" class="footer__social-image" alt="Github">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href="https://www.behance.net/bradcoleart" title="Link to Behance Profile" target="_blank">
-            <img src="./images/behance-logo.svg" class="footer__social-image" alt="Behance">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href="https://www.linkedin.com/in/bradcoleideas/" target="_blank">
-            <img src="./images/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
-          </a>
-        </li>
-        <li class="x-link-item">
-          <a  href="https://twitter.com/bradcolewebhead" title="Link to X Profile" target="_blank">
-            <img class="x-logo footer__social-image" src="./images/twitter.svg" alt="Twitter">
-          </a>
-        </li>
-      </ul>
-    </div>
-  </footer>
-
-  <a href="#top" class="back-to-top" title="Back to Top">
-    <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
-  </a>
-  <script src="./index.js"></script>
-</body>
-
+    <a href="#top" class="back-to-top" title="Back to Top">
+      <img
+        src="./images/arrow-up.svg"
+        alt="Back to Top"
+        class="back-to-top__image"
+      />
+    </a>
+    <script src="./index.js"></script>
+  </body>
 </html>
