@@ -718,7 +718,7 @@ ul.no-border-bottom {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background-color: var(--blood-orange);
+  background-color: var(--hot-pink);
   margin: 0 1em 0 0;
   animation: blink 1.5s ease-in-out infinite;
 }
