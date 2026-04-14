@@ -1,3 +1,5 @@
+console.log("JS is running");
+
 document.addEventListener("DOMContentLoaded", () => {
   const watchlistProjectBtn = document.getElementById("watchlist-project-btn");
   const watchlistExpandIcon = document.getElementById("watchlist-expand-icon");
