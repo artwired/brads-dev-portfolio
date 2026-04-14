@@ -1,160 +1,84 @@
 console.log("JS is running");
 
 document.addEventListener("DOMContentLoaded", () => {
-  const watchlistProjectBtn = document.getElementById("watchlist-project-btn");
-  const watchlistExpandIcon = document.getElementById("watchlist-expand-icon");
-  const watchlistProjectP = document.getElementById("watchlist-project-p");
-  const watchlistFullProjectDescription = document.getElementById(
-    "watchlist-full-project-description",
-  );
+  /* -----------------------------------------
+    PROJECT TOGGLE SYSTEM (REFACTORED)
+  ---------------------------------------- */
 
-  const sweetReleaseProjectBtn = document.getElementById(
-    "sweet-release-project-btn",
-  );
-  const sweetReleaseExpandIcon = document.getElementById(
-    "sweet-release-expand-icon",
-  );
-  const sweetReleaseProjectP = document.getElementById(
-    "sweet-release-project-p",
-  );
-  const sweetReleaseFullProjectDescription = document.getElementById(
-    "sweet-release-full-project-description",
-  );
+  const projects = [
+    {
+      btn: "watchlist-project-btn",
+      icon: "watchlist-expand-icon",
+      text: "watchlist-project-p",
+      description: "watchlist-full-project-description",
+      activeClass: "watchlist-smooth-toggle-description",
+    },
+    {
+      btn: "sweet-release-project-btn",
+      icon: "sweet-release-expand-icon",
+      text: "sweet-release-project-p",
+      description: "sweet-release-full-project-description",
+      activeClass: "sweet-release-smooth-toggle-description",
+    },
+    {
+      btn: "quizzical-project-btn",
+      icon: "quizzical-expand-icon",
+      text: "quizzical-project-p",
+      description: "quizzical-full-project-description",
+      activeClass: "quizzical-smooth-toggle-description",
+    },
+  ];
 
-  const quizzicalProjectBtn = document.getElementById("quizzical-project-btn");
-  const quizzicalExpandIcon = document.getElementById("quizzical-expand-icon");
-  const quizzicalProjectP = document.getElementById("quizzical-project-p");
-  const quizzicalFullProjectDescription = document.getElementById(
-    "quizzical-full-project-description",
-  );
+  projects.forEach((project) => {
+    const btn = document.getElementById(project.btn);
+    const icon = document.getElementById(project.icon);
+    const text = document.getElementById(project.text);
+    const description = document.getElementById(project.description);
 
-  // Watchlist hover states
-  watchlistProjectBtn.addEventListener("mouseover", () => {
-    if (!watchlistProjectP.classList.contains("active-clr")) {
-      watchlistExpandIcon.classList.remove("expand-icon");
-      watchlistExpandIcon.classList.add("expand-icon-hvr");
-      watchlistProjectP.classList.add("p-tag-clr-on-hvr");
-    }
-  });
+    if (!btn || !icon || !text || !description) return;
 
-  watchlistProjectBtn.addEventListener("mouseout", () => {
-    if (!watchlistProjectP.classList.contains("active-clr")) {
-      watchlistExpandIcon.classList.remove("expand-icon-hvr");
-      watchlistExpandIcon.classList.add("expand-icon");
-      watchlistProjectP.classList.remove("p-tag-clr-on-hvr");
-    }
-  });
+    // Hover
+    btn.addEventListener("mouseover", () => {
+      if (!text.classList.contains("active-clr")) {
+        icon.classList.remove("expand-icon");
+        icon.classList.add("expand-icon-hvr");
+        text.classList.add("p-tag-clr-on-hvr");
+      }
+    });
 
-  watchlistProjectBtn.addEventListener("click", () => {
-    if (watchlistProjectP.classList.contains("active-clr")) {
-      watchlistProjectP.classList.remove("active-clr");
-      watchlistFullProjectDescription.classList.add("hidden");
-      watchlistFullProjectDescription.classList.remove(
-        "watchlist-smooth-toggle-description",
-      );
-      watchlistExpandIcon.classList.remove("close-icon");
-      watchlistExpandIcon.classList.add("expand-icon");
-    } else {
-      watchlistProjectP.classList.add("active-clr");
-      watchlistFullProjectDescription.classList.remove("hidden");
-      watchlistFullProjectDescription.classList.add(
-        "watchlist-smooth-toggle-description",
-      );
-      watchlistExpandIcon.classList.remove("expand-icon");
-      watchlistExpandIcon.classList.add("close-icon");
-    }
+    btn.addEventListener("mouseout", () => {
+      if (!text.classList.contains("active-clr")) {
+        icon.classList.remove("expand-icon-hvr");
+        icon.classList.add("expand-icon");
+        text.classList.remove("p-tag-clr-on-hvr");
+      }
+    });
 
-    if (watchlistProjectP.classList.contains("active-clr")) {
-      watchlistExpandIcon.classList.remove("expand-icon-hvr");
-    } else {
-      watchlistExpandIcon.classList.add("expand-icon-hvr");
-    }
-  });
+    // Click toggle
+    btn.addEventListener("click", () => {
+      const isActive = text.classList.contains("active-clr");
 
-  // Sweet Release hover states
-  sweetReleaseProjectBtn.addEventListener("mouseover", () => {
-    if (!sweetReleaseProjectP.classList.contains("active-clr")) {
-      sweetReleaseExpandIcon.classList.remove("expand-icon");
-      sweetReleaseExpandIcon.classList.add("expand-icon-hvr");
-      sweetReleaseProjectP.classList.add("p-tag-clr-on-hvr");
-    }
-  });
+      if (isActive) {
+        text.classList.remove("active-clr");
+        description.classList.add("hidden");
+        description.classList.remove(project.activeClass);
+        icon.classList.remove("close-icon");
+        icon.classList.add("expand-icon");
+      } else {
+        text.classList.add("active-clr");
+        description.classList.remove("hidden");
+        description.classList.add(project.activeClass);
+        icon.classList.remove("expand-icon");
+        icon.classList.add("close-icon");
+      }
 
-  sweetReleaseProjectBtn.addEventListener("mouseout", () => {
-    if (!sweetReleaseProjectP.classList.contains("active-clr")) {
-      sweetReleaseExpandIcon.classList.remove("expand-icon-hvr");
-      sweetReleaseExpandIcon.classList.add("expand-icon");
-      sweetReleaseProjectP.classList.remove("p-tag-clr-on-hvr");
-    }
-  });
-
-  sweetReleaseProjectBtn.addEventListener("click", () => {
-    if (sweetReleaseProjectP.classList.contains("active-clr")) {
-      sweetReleaseProjectP.classList.remove("active-clr");
-      sweetReleaseFullProjectDescription.classList.add("hidden");
-      sweetReleaseFullProjectDescription.classList.remove(
-        "sweet-release-smooth-toggle-description",
-      );
-      sweetReleaseExpandIcon.classList.remove("close-icon");
-      sweetReleaseExpandIcon.classList.add("expand-icon");
-    } else {
-      sweetReleaseProjectP.classList.add("active-clr");
-      sweetReleaseFullProjectDescription.classList.remove("hidden");
-      sweetReleaseFullProjectDescription.classList.add(
-        "sweet-release-smooth-toggle-description",
-      );
-      sweetReleaseExpandIcon.classList.remove("expand-icon");
-      sweetReleaseExpandIcon.classList.add("close-icon");
-    }
-
-    if (sweetReleaseProjectP.classList.contains("active-clr")) {
-      sweetReleaseExpandIcon.classList.remove("expand-icon-hvr");
-    } else {
-      sweetReleaseExpandIcon.classList.add("expand-icon-hvr");
-    }
-  });
-
-  // Quizzical hover states
-  quizzicalProjectBtn.addEventListener("mouseover", () => {
-    if (!quizzicalProjectP.classList.contains("active-clr")) {
-      quizzicalExpandIcon.classList.remove("expand-icon");
-      quizzicalExpandIcon.classList.add("expand-icon-hvr");
-      quizzicalProjectP.classList.add("p-tag-clr-on-hvr");
-    }
-  });
-
-  quizzicalProjectBtn.addEventListener("mouseout", () => {
-    if (!quizzicalProjectP.classList.contains("active-clr")) {
-      quizzicalExpandIcon.classList.remove("expand-icon-hvr");
-      quizzicalExpandIcon.classList.add("expand-icon");
-      quizzicalProjectP.classList.remove("p-tag-clr-on-hvr");
-    }
-  });
-
-  quizzicalProjectBtn.addEventListener("click", () => {
-    if (quizzicalProjectP.classList.contains("active-clr")) {
-      quizzicalProjectP.classList.remove("active-clr");
-      quizzicalFullProjectDescription.classList.add("hidden");
-      quizzicalFullProjectDescription.classList.remove(
-        "quizzical-smooth-toggle-description",
-      );
-      quizzicalExpandIcon.classList.remove("close-icon");
-      quizzicalExpandIcon.classList.add("expand-icon");
-    } else {
-      quizzicalProjectP.classList.add("active-clr");
-      quizzicalFullProjectDescription.classList.remove("hidden");
-      quizzicalFullProjectDescription.classList.add(
-        "quizzical-smooth-toggle-description",
-      );
-      quizzicalExpandIcon.classList.remove("expand-icon");
-      quizzicalExpandIcon.classList.add("close-icon");
-    }
-
-    if (quizzicalProjectP.classList.contains("active-clr")) {
-      quizzicalExpandIcon.classList.remove("expand-icon-hvr");
-    } else {
-      quizzicalExpandIcon.classList.add("expand-icon-hvr");
-    }
+      // Hover state reset
+      if (text.classList.contains("active-clr")) {
+        icon.classList.remove("expand-icon-hvr");
+      } else {
+        icon.classList.add("expand-icon-hvr");
+      }
+    });
   });
 
   /* -----------------------------------------
@@ -179,26 +103,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("keydown", handleFirstTab);
 
+  /* -----------------------------------------
+    Back to top button
+  ---------------------------------------- */
+
   const backToTopButton = document.querySelector(".back-to-top");
   let isBackToTopRendered = false;
 
-  let alterStyles = (isBackToTopRendered) => {
-    backToTopButton.style.visibility = isBackToTopRendered
-      ? "visible"
-      : "hidden";
-    backToTopButton.style.opacity = isBackToTopRendered ? 1 : 0;
-    backToTopButton.style.transform = isBackToTopRendered
-      ? "scale(1)"
-      : "scale(0)";
+  const alterStyles = (isVisible) => {
+    backToTopButton.style.visibility = isVisible ? "visible" : "hidden";
+    backToTopButton.style.opacity = isVisible ? 1 : 0;
+    backToTopButton.style.transform = isVisible ? "scale(1)" : "scale(0)";
   };
 
   window.addEventListener("scroll", () => {
     if (window.scrollY > 700) {
       isBackToTopRendered = true;
-      alterStyles(isBackToTopRendered);
     } else {
       isBackToTopRendered = false;
-      alterStyles(isBackToTopRendered);
     }
+    alterStyles(isBackToTopRendered);
   });
 });
