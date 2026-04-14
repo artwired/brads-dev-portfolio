@@ -569,7 +569,9 @@ ul.no-border-bottom {
   list-style-position: inside;
   margin-bottom: var(--gutter-normal);
 }
-
+.work__list li::marker {
+  color: #ff4d8d;
+}
 .work__code {
   display: block;
   height: 3rem;
