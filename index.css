@@ -31,6 +31,7 @@
   --blood-orange: #ff4632;
   --white: #f0e9f2;
   --white-1: #e5e5e6da;
+  --hot-pink: #ff4d8d;
 
   --container-max-width: 1180px;
   --container-normal-width: 800px;
@@ -144,7 +145,7 @@ h2::after {
   display: block;
   height: 2px;
   width: 10rem;
-  background: var(--blood-orange);
+  background: var(--hot-pink);
   margin: var(--gutter-small) 0;
 }
 
@@ -570,7 +571,7 @@ ul.no-border-bottom {
   margin-bottom: var(--gutter-normal);
 }
 .work__list li::marker {
-  color: #ff4d8d;
+  color: var(--hot-pink);
 }
 .work__code {
   display: block;
