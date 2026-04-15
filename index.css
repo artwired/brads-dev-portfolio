@@ -441,6 +441,11 @@ body:not(.user-is-tabbing) a:focus {
   letter-spacing: 1px;
   font-size: 2.5rem;
 }
+@supports (-webkit-touch-callout: none) {
+  .header {
+    background-attachment: scroll;
+  }
+}
 
 @media (max-width: 500px) {
   .header {
