@@ -52,7 +52,10 @@ html {
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-
+html,
+body {
+  background-color: var(--deep-green);
+}
 @media (max-width: 1000px) {
   html {
     font-size: 52%;
@@ -426,6 +429,8 @@ body:not(.user-is-tabbing) a:focus {
   background-attachment: fixed;
   font-size: var(--font-size-normal);
   width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 .header__text {
