@@ -35,7 +35,8 @@
 
   --container-max-width: 1180px;
   --container-normal-width: 800px;
-  --container-medium-width: 700px;
+  --container-medium-width: 600px;
+  --container-700-width: 700px;
   --container-small-width: 500px;
 
   --gutter-huge: 12rem;
@@ -643,7 +644,7 @@ ul.no-border-bottom {
 /* ----- Clients ----- */
 /* --------------------------------------- */
 
-.client__logos {
+/* .client__logos {
   display: flex;
   justify-content: space-between;
   filter: invert(100%) grayscale(100%) opacity(0.8);
@@ -663,7 +664,7 @@ ul.no-border-bottom {
   .client__logo:not(:last-of-type) {
     margin-right: var(--gutter-medium);
   }
-}
+} */
 
 /* --------------------------------------- */
 /* ----- About ----- */
@@ -702,7 +703,7 @@ ul.no-border-bottom {
 /* --------------------------------------- */
 
 .contact__info {
-  max-width: var(--container-medium-width);
+  max-width: var(--container-700-width);
 }
 
 .availability-container {
