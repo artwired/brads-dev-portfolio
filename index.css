@@ -442,7 +442,7 @@ body:not(.user-is-tabbing) a:focus {
 
 .header__text p {
   margin: 0.5rem 0 3.5rem;
-  max-width: var(--container-700-width);
+  max-width: var(--container-normal-width);
   font-family: "Cabin", sans-serif;
   letter-spacing: 1px;
   font-size: 2.5rem;
