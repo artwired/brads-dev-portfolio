@@ -814,10 +814,15 @@ ul.no-border-bottom {
   }
 
   .nav__items {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+  }
+
+  .nav__items li {
+    text-align: center;
   }
 
   .nav__items li:last-child {
