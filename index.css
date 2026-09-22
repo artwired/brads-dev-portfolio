@@ -797,6 +797,19 @@ ul.no-border-bottom {
   width: 84px;
   transform: translateY(3px);
 }
+/* Resume Page styles */
+.viewport-container {
+  height: 100vh;
+  height: 100dvh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.resume-btn {
+  cursor: pointer;
+}
+/* end resume page styles */
 
 @media (max-width: 500px) {
   .footer {
