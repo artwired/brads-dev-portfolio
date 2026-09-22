@@ -798,14 +798,6 @@ ul.no-border-bottom {
   transform: translateY(3px);
 }
 /* Resume Page styles */
-.viewport-container {
-  height: 100vh;
-  height: 100dvh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .resume-btn {
   cursor: pointer;
 }
