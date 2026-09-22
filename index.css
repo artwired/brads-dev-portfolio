@@ -809,6 +809,10 @@ ul.no-border-bottom {
   }
 }
 @media (max-width: 768px) {
+  .nav {
+    justify-content: center;
+  }
+
   .nav__items {
     display: flex;
     flex-wrap: wrap;
