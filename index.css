@@ -808,3 +808,15 @@ ul.no-border-bottom {
     padding: var(--gutter-medium) 0;
   }
 }
+@media (max-width: 768px) {
+  .nav__items {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav__items li:last-child {
+    flex-basis: 100%;
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
