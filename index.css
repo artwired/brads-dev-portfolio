@@ -803,6 +803,13 @@ ul.no-border-bottom {
 .resume-btn {
   cursor: pointer;
 }
+.resume-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 /* end resume page styles */
 
 @media (max-width: 500px) {
