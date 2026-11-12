@@ -187,6 +187,9 @@ h4::after {
 p {
   margin: var(--gutter-small) 0;
 }
+.services h3 {
+  font-size: 3rem;
+}
 
 @media (max-width: 900px) {
   p {
@@ -643,6 +646,39 @@ ul.no-border-bottom {
 }
 
 /* --------------------------------------- */
+/* ----- Services ----- */
+/* --------------------------------------- */
+
+.services__intro {
+  margin: 0.5rem 0 8rem;
+  max-width: var(--container-normal-width);
+  font-family: "Cabin", sans-serif;
+  letter-spacing: 1px;
+  font-size: 2rem;
+}
+.services__number {
+  color: #ff4d8d;
+}
+.services__card {
+  margin-bottom: 6rem;
+}
+.services__cta {
+  margin-top: var(--gutter-huge);
+}
+
+@media (min-width: 900px) {
+  .services__grid {
+    display: flex;
+    gap: 6rem;
+  }
+  .services__intro {
+    margin: 0.5rem 0 8rem;
+    max-width: var(--container-normal-width);
+    font-size: 2.5rem;
+  }
+}
+
+/* --------------------------------------- */
 /* ----- Clients ----- */
 /* --------------------------------------- */
 
@@ -690,7 +726,8 @@ ul.no-border-bottom {
 }
 
 @media (min-width: 901px) {
-  .about__text {
+  .about__text,
+  .services__text {
     flex: 0 0 35%;
   }
 
